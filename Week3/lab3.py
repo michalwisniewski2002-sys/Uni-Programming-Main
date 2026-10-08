@@ -12,21 +12,27 @@ while op == True: #student completes while loop
 
     if choice == "1": #user chooses 'deposit'
          #student completes while loop
-        print("Thank you for choosing to deposit")
+        print(" \n Thank you for choosing to deposit")
         balance = balance + int(input("How much would you like to deposit:"))
 
     elif choice == "2":
-       #student completes while loop
-       print("Thank you for choosing to withdraw")
-       balance = balance - int(input("How much would you like to deposit:"))
+        #student completes while loop
+        print("\n Thank you for choosing to withdraw")
+        withdraw = int(input("how much would you like to withdraw :"))
 
+        if (balance - withdraw) < 0:
+            print("sorry you dont have enough funds")
+
+        else:
+            balance = balance - withdraw 
+            print(f"withdraw successful, new balance is :£{balance}")
         
     elif choice=="3":
         #student does this part too
-      pass
+        print("\n Thank you for choosing to check your balance")
+        print(f"Your current balance is £{balance}")
 
-    elif choice.upper == "Q":#user chooses 'exit'
-        
+    elif choice == "Q" or choice == "q":#user chooses 'exit'
         print("""
     -------------------------------------
    | Thanks for choosing us as your bank |
